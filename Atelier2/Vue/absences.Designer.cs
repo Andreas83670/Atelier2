@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.grp_Absences = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.lst_absences = new System.Windows.Forms.ListBox();
             this.btn_ajouter = new System.Windows.Forms.Button();
             this.btn_modifier = new System.Windows.Forms.Button();
             this.btn_supprimer = new System.Windows.Forms.Button();
@@ -39,7 +39,7 @@
             // 
             // grp_Absences
             // 
-            this.grp_Absences.Controls.Add(this.checkBox1);
+            this.grp_Absences.Controls.Add(this.lst_absences);
             this.grp_Absences.Controls.Add(this.btn_ajouter);
             this.grp_Absences.Controls.Add(this.btn_modifier);
             this.grp_Absences.Controls.Add(this.btn_supprimer);
@@ -52,16 +52,14 @@
             this.grp_Absences.TabStop = false;
             this.grp_Absences.Text = "Absences";
             // 
-            // checkBox1
+            // lst_absences
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(36, 74);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 5;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.lst_absences.FormattingEnabled = true;
+            this.lst_absences.ItemHeight = 24;
+            this.lst_absences.Location = new System.Drawing.Point(6, 28);
+            this.lst_absences.Name = "lst_absences";
+            this.lst_absences.Size = new System.Drawing.Size(358, 244);
+            this.lst_absences.TabIndex = 5;
             // 
             // btn_ajouter
             // 
@@ -72,6 +70,7 @@
             this.btn_ajouter.TabIndex = 4;
             this.btn_ajouter.Text = "Ajouter";
             this.btn_ajouter.UseVisualStyleBackColor = true;
+            this.btn_ajouter.Click += new System.EventHandler(this.btn_ajouter_Click);
             // 
             // btn_modifier
             // 
@@ -82,6 +81,7 @@
             this.btn_modifier.TabIndex = 2;
             this.btn_modifier.Text = "Modifier";
             this.btn_modifier.UseVisualStyleBackColor = true;
+            this.btn_modifier.Click += new System.EventHandler(this.btn_modifier_Click);
             // 
             // btn_supprimer
             // 
@@ -92,6 +92,7 @@
             this.btn_supprimer.TabIndex = 1;
             this.btn_supprimer.Text = "Supprimer";
             this.btn_supprimer.UseVisualStyleBackColor = true;
+            this.btn_supprimer.Click += new System.EventHandler(this.btn_supprimer_Click);
             // 
             // btn_toutSélectionner
             // 
@@ -111,8 +112,8 @@
             this.Controls.Add(this.grp_Absences);
             this.Name = "absences";
             this.Text = "absences";
+            this.Load += new System.EventHandler(this.absences_Load);
             this.grp_Absences.ResumeLayout(false);
-            this.grp_Absences.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -120,10 +121,10 @@
         #endregion
 
         private System.Windows.Forms.GroupBox grp_Absences;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button btn_ajouter;
         private System.Windows.Forms.Button btn_modifier;
         private System.Windows.Forms.Button btn_supprimer;
         private System.Windows.Forms.Button btn_toutSélectionner;
+        private System.Windows.Forms.ListBox lst_absences;
     }
 }

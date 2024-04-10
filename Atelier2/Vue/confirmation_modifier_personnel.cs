@@ -12,6 +12,9 @@ namespace Atelier2.Vue
 {
     public partial class confirmation_modifier_personnel : Form
     {
+        /// <summary>
+        /// iniatialisation de confirmation modifier personnel
+        /// </summary>
         public confirmation_modifier_personnel()
         {
             InitializeComponent();

@@ -1,5 +1,8 @@
 ﻿namespace Atelier2
 {
+    /// <summary>
+    /// classe ajouter personnel
+    /// </summary>
     partial class ajouter_personnel
     {
         /// <summary>
@@ -29,18 +32,18 @@
         private void InitializeComponent()
         {
             this.grp_AjouterUnNouveauPersonnel = new System.Windows.Forms.GroupBox();
+            this.cb_service = new System.Windows.Forms.ComboBox();
+            this.txt_mail = new System.Windows.Forms.TextBox();
+            this.txt_tel = new System.Windows.Forms.TextBox();
+            this.txt_prenom = new System.Windows.Forms.TextBox();
+            this.txt_nom = new System.Windows.Forms.TextBox();
+            this.lbl_service = new System.Windows.Forms.Label();
+            this.lbl_mail = new System.Windows.Forms.Label();
+            this.lbl_tel = new System.Windows.Forms.Label();
+            this.lbl_prenom = new System.Windows.Forms.Label();
+            this.lbl_nom = new System.Windows.Forms.Label();
             this.btn_annuler = new System.Windows.Forms.Button();
             this.btn_valider = new System.Windows.Forms.Button();
-            this.lbl_nom = new System.Windows.Forms.Label();
-            this.lbl_prenom = new System.Windows.Forms.Label();
-            this.lbl_tel = new System.Windows.Forms.Label();
-            this.lbl_mail = new System.Windows.Forms.Label();
-            this.lbl_service = new System.Windows.Forms.Label();
-            this.txt_nom = new System.Windows.Forms.TextBox();
-            this.txt_prenom = new System.Windows.Forms.TextBox();
-            this.txt_tel = new System.Windows.Forms.TextBox();
-            this.txt_mail = new System.Windows.Forms.TextBox();
-            this.cb_service = new System.Windows.Forms.ComboBox();
             this.grp_AjouterUnNouveauPersonnel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,65 +70,46 @@
             this.grp_AjouterUnNouveauPersonnel.Text = "Ajouter un nouveau personnel";
             this.grp_AjouterUnNouveauPersonnel.Enter += new System.EventHandler(this.grp_seConnecter_Enter);
             // 
-            // btn_annuler
+            // cb_service
             // 
-            this.btn_annuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_annuler.Location = new System.Drawing.Point(152, 156);
-            this.btn_annuler.Name = "btn_annuler";
-            this.btn_annuler.Size = new System.Drawing.Size(53, 23);
-            this.btn_annuler.TabIndex = 2;
-            this.btn_annuler.Text = "Annuler";
-            this.btn_annuler.UseVisualStyleBackColor = true;
+            this.cb_service.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_service.FormattingEnabled = true;
+            this.cb_service.Location = new System.Drawing.Point(84, 129);
+            this.cb_service.Name = "cb_service";
+            this.cb_service.Size = new System.Drawing.Size(121, 21);
+            this.cb_service.TabIndex = 12;
             // 
-            // btn_valider
+            // txt_mail
             // 
-            this.btn_valider.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_valider.Location = new System.Drawing.Point(84, 156);
-            this.btn_valider.Name = "btn_valider";
-            this.btn_valider.Size = new System.Drawing.Size(62, 23);
-            this.btn_valider.TabIndex = 1;
-            this.btn_valider.Text = "Valider";
-            this.btn_valider.UseVisualStyleBackColor = true;
+            this.txt_mail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_mail.Location = new System.Drawing.Point(84, 103);
+            this.txt_mail.Name = "txt_mail";
+            this.txt_mail.Size = new System.Drawing.Size(121, 20);
+            this.txt_mail.TabIndex = 11;
             // 
-            // lbl_nom
+            // txt_tel
             // 
-            this.lbl_nom.AutoSize = true;
-            this.lbl_nom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nom.Location = new System.Drawing.Point(25, 37);
-            this.lbl_nom.Name = "lbl_nom";
-            this.lbl_nom.Size = new System.Drawing.Size(29, 13);
-            this.lbl_nom.TabIndex = 3;
-            this.lbl_nom.Text = "Nom";
+            this.txt_tel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_tel.Location = new System.Drawing.Point(84, 80);
+            this.txt_tel.Name = "txt_tel";
+            this.txt_tel.Size = new System.Drawing.Size(121, 20);
+            this.txt_tel.TabIndex = 10;
             // 
-            // lbl_prenom
+            // txt_prenom
             // 
-            this.lbl_prenom.AutoSize = true;
-            this.lbl_prenom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_prenom.Location = new System.Drawing.Point(25, 60);
-            this.lbl_prenom.Name = "lbl_prenom";
-            this.lbl_prenom.Size = new System.Drawing.Size(43, 13);
-            this.lbl_prenom.TabIndex = 4;
-            this.lbl_prenom.Text = "Prénom";
+            this.txt_prenom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_prenom.Location = new System.Drawing.Point(84, 57);
+            this.txt_prenom.Name = "txt_prenom";
+            this.txt_prenom.Size = new System.Drawing.Size(121, 20);
+            this.txt_prenom.TabIndex = 9;
             // 
-            // lbl_tel
+            // txt_nom
             // 
-            this.lbl_tel.AutoSize = true;
-            this.lbl_tel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tel.Location = new System.Drawing.Point(25, 83);
-            this.lbl_tel.Name = "lbl_tel";
-            this.lbl_tel.Size = new System.Drawing.Size(25, 13);
-            this.lbl_tel.TabIndex = 5;
-            this.lbl_tel.Text = "Tél.";
-            // 
-            // lbl_mail
-            // 
-            this.lbl_mail.AutoSize = true;
-            this.lbl_mail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mail.Location = new System.Drawing.Point(25, 106);
-            this.lbl_mail.Name = "lbl_mail";
-            this.lbl_mail.Size = new System.Drawing.Size(26, 13);
-            this.lbl_mail.TabIndex = 6;
-            this.lbl_mail.Text = "Mail";
+            this.txt_nom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nom.Location = new System.Drawing.Point(84, 34);
+            this.txt_nom.Name = "txt_nom";
+            this.txt_nom.Size = new System.Drawing.Size(121, 20);
+            this.txt_nom.TabIndex = 8;
             // 
             // lbl_service
             // 
@@ -137,46 +121,67 @@
             this.lbl_service.TabIndex = 7;
             this.lbl_service.Text = "Service";
             // 
-            // txt_nom
+            // lbl_mail
             // 
-            this.txt_nom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nom.Location = new System.Drawing.Point(84, 34);
-            this.txt_nom.Name = "txt_nom";
-            this.txt_nom.Size = new System.Drawing.Size(121, 20);
-            this.txt_nom.TabIndex = 8;
+            this.lbl_mail.AutoSize = true;
+            this.lbl_mail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mail.Location = new System.Drawing.Point(25, 106);
+            this.lbl_mail.Name = "lbl_mail";
+            this.lbl_mail.Size = new System.Drawing.Size(26, 13);
+            this.lbl_mail.TabIndex = 6;
+            this.lbl_mail.Text = "Mail";
             // 
-            // txt_prenom
+            // lbl_tel
             // 
-            this.txt_prenom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_prenom.Location = new System.Drawing.Point(84, 57);
-            this.txt_prenom.Name = "txt_prenom";
-            this.txt_prenom.Size = new System.Drawing.Size(121, 20);
-            this.txt_prenom.TabIndex = 9;
+            this.lbl_tel.AutoSize = true;
+            this.lbl_tel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tel.Location = new System.Drawing.Point(25, 83);
+            this.lbl_tel.Name = "lbl_tel";
+            this.lbl_tel.Size = new System.Drawing.Size(25, 13);
+            this.lbl_tel.TabIndex = 5;
+            this.lbl_tel.Text = "Tél.";
             // 
-            // txt_tel
+            // lbl_prenom
             // 
-            this.txt_tel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_tel.Location = new System.Drawing.Point(84, 80);
-            this.txt_tel.Name = "txt_tel";
-            this.txt_tel.Size = new System.Drawing.Size(121, 20);
-            this.txt_tel.TabIndex = 10;
+            this.lbl_prenom.AutoSize = true;
+            this.lbl_prenom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_prenom.Location = new System.Drawing.Point(25, 60);
+            this.lbl_prenom.Name = "lbl_prenom";
+            this.lbl_prenom.Size = new System.Drawing.Size(43, 13);
+            this.lbl_prenom.TabIndex = 4;
+            this.lbl_prenom.Text = "Prénom";
             // 
-            // txt_mail
+            // lbl_nom
             // 
-            this.txt_mail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_mail.Location = new System.Drawing.Point(84, 103);
-            this.txt_mail.Name = "txt_mail";
-            this.txt_mail.Size = new System.Drawing.Size(121, 20);
-            this.txt_mail.TabIndex = 11;
+            this.lbl_nom.AutoSize = true;
+            this.lbl_nom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nom.Location = new System.Drawing.Point(25, 37);
+            this.lbl_nom.Name = "lbl_nom";
+            this.lbl_nom.Size = new System.Drawing.Size(29, 13);
+            this.lbl_nom.TabIndex = 3;
+            this.lbl_nom.Text = "Nom";
             // 
-            // cb_service
+            // btn_annuler
             // 
-            this.cb_service.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_service.FormattingEnabled = true;
-            this.cb_service.Location = new System.Drawing.Point(84, 129);
-            this.cb_service.Name = "cb_service";
-            this.cb_service.Size = new System.Drawing.Size(121, 21);
-            this.cb_service.TabIndex = 12;
+            this.btn_annuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_annuler.Location = new System.Drawing.Point(152, 156);
+            this.btn_annuler.Name = "btn_annuler";
+            this.btn_annuler.Size = new System.Drawing.Size(53, 23);
+            this.btn_annuler.TabIndex = 2;
+            this.btn_annuler.Text = "Annuler";
+            this.btn_annuler.UseVisualStyleBackColor = true;
+            this.btn_annuler.Click += new System.EventHandler(this.btn_annuler_Click);
+            // 
+            // btn_valider
+            // 
+            this.btn_valider.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_valider.Location = new System.Drawing.Point(84, 156);
+            this.btn_valider.Name = "btn_valider";
+            this.btn_valider.Size = new System.Drawing.Size(62, 23);
+            this.btn_valider.TabIndex = 1;
+            this.btn_valider.Text = "Valider";
+            this.btn_valider.UseVisualStyleBackColor = true;
+            this.btn_valider.Click += new System.EventHandler(this.btn_valider_Click);
             // 
             // ajouter_personnel
             // 
@@ -186,6 +191,7 @@
             this.Controls.Add(this.grp_AjouterUnNouveauPersonnel);
             this.Name = "ajouter_personnel";
             this.Text = "ajouter_personnel";
+            this.Load += new System.EventHandler(this.ajouter_personnel_Load);
             this.grp_AjouterUnNouveauPersonnel.ResumeLayout(false);
             this.grp_AjouterUnNouveauPersonnel.PerformLayout();
             this.ResumeLayout(false);

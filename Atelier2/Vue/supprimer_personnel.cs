@@ -12,6 +12,9 @@ namespace Atelier2.Vue
 {
     public partial class supprimer_personnel : Form
     {
+        /// <summary>
+        /// iniatialisation de supprimer personnel
+        /// </summary>
         public supprimer_personnel()
         {
             InitializeComponent();
@@ -20,6 +23,21 @@ namespace Atelier2.Vue
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void supprimer_personnel_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_valider_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void btn_annuler_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

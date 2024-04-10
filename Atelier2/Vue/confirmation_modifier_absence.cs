@@ -10,8 +10,14 @@ using System.Windows.Forms;
 
 namespace Atelier2.Vue
 {
+    /// <summary>
+    /// classe de confirmation modifier absence
+    /// </summary>
     public partial class confirmation_modifier_absence : Form
     {
+        /// <summary>
+        /// initialisation de modifier absence
+        /// </summary>
         public confirmation_modifier_absence()
         {
             InitializeComponent();

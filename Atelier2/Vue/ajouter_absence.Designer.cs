@@ -30,15 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.grp_ajouterUneAbsence = new System.Windows.Forms.GroupBox();
+            this.date_fin = new System.Windows.Forms.DateTimePicker();
+            this.date_debut = new System.Windows.Forms.DateTimePicker();
+            this.lbl_dateDeFin = new System.Windows.Forms.Label();
             this.cb_motif = new System.Windows.Forms.ComboBox();
             this.lbl_motif = new System.Windows.Forms.Label();
             this.lbl_dateDeDebut = new System.Windows.Forms.Label();
             this.btn_annuler = new System.Windows.Forms.Button();
             this.btn_valider = new System.Windows.Forms.Button();
-            this.lbl_dateDeFin = new System.Windows.Forms.Label();
-            this.date_debut = new System.Windows.Forms.DateTimePicker();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.date_fin = new System.Windows.Forms.DateTimePicker();
             this.grp_ajouterUneAbsence.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +59,32 @@
             this.grp_ajouterUneAbsence.TabIndex = 5;
             this.grp_ajouterUneAbsence.TabStop = false;
             this.grp_ajouterUneAbsence.Text = "Ajouter une absence";
+            // 
+            // date_fin
+            // 
+            this.date_fin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date_fin.Location = new System.Drawing.Point(106, 57);
+            this.date_fin.Name = "date_fin";
+            this.date_fin.Size = new System.Drawing.Size(167, 20);
+            this.date_fin.TabIndex = 15;
+            // 
+            // date_debut
+            // 
+            this.date_debut.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date_debut.Location = new System.Drawing.Point(107, 31);
+            this.date_debut.Name = "date_debut";
+            this.date_debut.Size = new System.Drawing.Size(167, 20);
+            this.date_debut.TabIndex = 14;
+            // 
+            // lbl_dateDeFin
+            // 
+            this.lbl_dateDeFin.AutoSize = true;
+            this.lbl_dateDeFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_dateDeFin.Location = new System.Drawing.Point(25, 60);
+            this.lbl_dateDeFin.Name = "lbl_dateDeFin";
+            this.lbl_dateDeFin.Size = new System.Drawing.Size(59, 13);
+            this.lbl_dateDeFin.TabIndex = 13;
+            this.lbl_dateDeFin.Text = "Date de fin";
             // 
             // cb_motif
             // 
@@ -98,6 +124,7 @@
             this.btn_annuler.TabIndex = 2;
             this.btn_annuler.Text = "Annuler";
             this.btn_annuler.UseVisualStyleBackColor = true;
+            this.btn_annuler.Click += new System.EventHandler(this.btn_annuler_Click);
             // 
             // btn_valider
             // 
@@ -108,32 +135,7 @@
             this.btn_valider.TabIndex = 1;
             this.btn_valider.Text = "Valider";
             this.btn_valider.UseVisualStyleBackColor = true;
-            // 
-            // lbl_dateDeFin
-            // 
-            this.lbl_dateDeFin.AutoSize = true;
-            this.lbl_dateDeFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_dateDeFin.Location = new System.Drawing.Point(25, 60);
-            this.lbl_dateDeFin.Name = "lbl_dateDeFin";
-            this.lbl_dateDeFin.Size = new System.Drawing.Size(59, 13);
-            this.lbl_dateDeFin.TabIndex = 13;
-            this.lbl_dateDeFin.Text = "Date de fin";
-            // 
-            // date_debut
-            // 
-            this.date_debut.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date_debut.Location = new System.Drawing.Point(107, 31);
-            this.date_debut.Name = "date_debut";
-            this.date_debut.Size = new System.Drawing.Size(167, 20);
-            this.date_debut.TabIndex = 14;
-            // 
-            // date_fin
-            // 
-            this.date_fin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date_fin.Location = new System.Drawing.Point(106, 57);
-            this.date_fin.Name = "date_fin";
-            this.date_fin.Size = new System.Drawing.Size(167, 20);
-            this.date_fin.TabIndex = 15;
+            this.btn_valider.Click += new System.EventHandler(this.btn_valider_Click);
             // 
             // ajouter_absence
             // 
@@ -143,6 +145,7 @@
             this.Controls.Add(this.grp_ajouterUneAbsence);
             this.Name = "ajouter_absence";
             this.Text = "ajouter_absence";
+            this.Load += new System.EventHandler(this.ajouter_absence_Load);
             this.grp_ajouterUneAbsence.ResumeLayout(false);
             this.grp_ajouterUneAbsence.PerformLayout();
             this.ResumeLayout(false);

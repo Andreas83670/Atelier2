@@ -1,5 +1,8 @@
 ﻿namespace Atelier2.Vue
 {
+    /// <summary>
+    /// classe confirmation modifier personnel
+    /// </summary>
     partial class confirmation_modifier_personnel
     {
         /// <summary>

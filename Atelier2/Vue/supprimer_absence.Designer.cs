@@ -67,6 +67,7 @@
             this.btn_annuler.TabIndex = 2;
             this.btn_annuler.Text = "Annuler";
             this.btn_annuler.UseVisualStyleBackColor = true;
+            this.btn_annuler.Click += new System.EventHandler(this.btn_annuler_Click);
             // 
             // btn_valider
             // 
@@ -77,6 +78,7 @@
             this.btn_valider.TabIndex = 1;
             this.btn_valider.Text = "Valider";
             this.btn_valider.UseVisualStyleBackColor = true;
+            this.btn_valider.Click += new System.EventHandler(this.btn_valider_Click);
             // 
             // supprimer_absence
             // 
@@ -86,6 +88,7 @@
             this.Controls.Add(this.grp_SupprimerUneAbsence);
             this.Name = "supprimer_absence";
             this.Text = "supprimer_absence";
+            this.Load += new System.EventHandler(this.supprimer_absence_Load);
             this.grp_SupprimerUneAbsence.ResumeLayout(false);
             this.grp_SupprimerUneAbsence.PerformLayout();
             this.ResumeLayout(false);
