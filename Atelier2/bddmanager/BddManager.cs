@@ -1,19 +1,14 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
 
-
-namespace Atelier2.bddmanager
+namespace GestionPersonnel.bddmanager
 {
-    class BddManager
+    /// <summary>
+    /// Singleton : connexion à la base de données et exécution des requêtes
+    /// </summary>
+    public class BddManager
     {
-        /// <summary>
-        /// connexion à la bdd
-        /// </summary>
-        private string stringConnect = "server=localhost;user id=root;database=personnel; SslMode=none";
         /// <summary>
         /// instance unique de la classe
         /// </summary>
@@ -22,7 +17,6 @@ namespace Atelier2.bddmanager
         /// objet de connexion à la BDD à partir d'une chaîne de connexion
         /// </summary>
         private readonly MySqlConnection connection;
-
 
         /// <summary>
         /// Constructeur pour créer la connexion à la BDD et l'ouvrir
@@ -106,7 +100,6 @@ namespace Atelier2.bddmanager
             reader.Close();
             return records;
         }
-
 
     }
 }

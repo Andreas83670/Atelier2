@@ -1,4 +1,4 @@
-﻿namespace Atelier2.Vue
+﻿namespace GestionPersonnel.Vue
 {
     /// <summary>
     /// classe de se connecter
@@ -32,6 +32,7 @@
         private void InitializeComponent()
         {
             this.grp_seConnecter = new System.Windows.Forms.GroupBox();
+            this.lbl_info = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.txt_motdepasse = new System.Windows.Forms.TextBox();
             this.txt_login = new System.Windows.Forms.TextBox();
@@ -42,6 +43,7 @@
             // 
             // grp_seConnecter
             // 
+            this.grp_seConnecter.Controls.Add(this.lbl_info);
             this.grp_seConnecter.Controls.Add(this.button1);
             this.grp_seConnecter.Controls.Add(this.txt_motdepasse);
             this.grp_seConnecter.Controls.Add(this.txt_login);
@@ -54,6 +56,16 @@
             this.grp_seConnecter.TabIndex = 1;
             this.grp_seConnecter.TabStop = false;
             this.grp_seConnecter.Text = "Se connecter";
+            // 
+            // lbl_info
+            // 
+            this.lbl_info.AutoSize = true;
+            this.lbl_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_info.Location = new System.Drawing.Point(175, 15);
+            this.lbl_info.Name = "lbl_info";
+            this.lbl_info.Size = new System.Drawing.Size(249, 13);
+            this.lbl_info.TabIndex = 5;
+            this.lbl_info.Text = "le nom d\'utilisateur ou le mot de passe est incorrect.";
             // 
             // button1
             // 
@@ -72,6 +84,7 @@
             this.txt_motdepasse.Name = "txt_motdepasse";
             this.txt_motdepasse.Size = new System.Drawing.Size(134, 29);
             this.txt_motdepasse.TabIndex = 3;
+            this.txt_motdepasse.TextChanged += new System.EventHandler(this.txt_motdepasse_TextChanged);
             // 
             // txt_login
             // 
@@ -109,6 +122,7 @@
             this.Controls.Add(this.grp_seConnecter);
             this.Name = "se_connecter";
             this.Text = "se_connecter";
+            this.Load += new System.EventHandler(this.se_connecter_Load);
             this.grp_seConnecter.ResumeLayout(false);
             this.grp_seConnecter.PerformLayout();
             this.ResumeLayout(false);
@@ -123,5 +137,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txt_motdepasse;
         private System.Windows.Forms.TextBox txt_login;
+        private System.Windows.Forms.Label lbl_info;
     }
 }

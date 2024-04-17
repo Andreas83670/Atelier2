@@ -1,4 +1,4 @@
-﻿namespace Atelier2
+﻿namespace GestionPersonnel
 {
     /// <summary>
     /// classe ajouter personnel
@@ -64,7 +64,7 @@
             this.grp_AjouterUnNouveauPersonnel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grp_AjouterUnNouveauPersonnel.Location = new System.Drawing.Point(12, 12);
             this.grp_AjouterUnNouveauPersonnel.Name = "grp_AjouterUnNouveauPersonnel";
-            this.grp_AjouterUnNouveauPersonnel.Size = new System.Drawing.Size(280, 206);
+            this.grp_AjouterUnNouveauPersonnel.Size = new System.Drawing.Size(280, 190);
             this.grp_AjouterUnNouveauPersonnel.TabIndex = 3;
             this.grp_AjouterUnNouveauPersonnel.TabStop = false;
             this.grp_AjouterUnNouveauPersonnel.Text = "Ajouter un nouveau personnel";
@@ -187,7 +187,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(298, 223);
+            this.ClientSize = new System.Drawing.Size(298, 205);
             this.Controls.Add(this.grp_AjouterUnNouveauPersonnel);
             this.Name = "ajouter_personnel";
             this.Text = "ajouter_personnel";

@@ -69,8 +69,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="bddmanager\BddManager.cs" />
-    <Compile Include="Dal\Connexion.cs" />
+    <Compile Include="Dal\Access.cs" />
+    <Compile Include="model\Absences.cs" />
     <Compile Include="model\Personnel.cs" />
+    <Compile Include="model\Responsable.cs" />
     <Compile Include="Vue\absences.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -1,4 +1,4 @@
-﻿namespace Atelier2
+﻿namespace GestionPersonnel
 {
     /// <summary>
     /// classe liste personnel
@@ -32,31 +32,41 @@
         private void InitializeComponent()
         {
             this.grp_ListeDuPersonnel = new System.Windows.Forms.GroupBox();
+            this.dgv_personnel = new System.Windows.Forms.DataGridView();
             this.btn_nouveau = new System.Windows.Forms.Button();
             this.btn_gestionDesAbsences = new System.Windows.Forms.Button();
             this.btn_modifier = new System.Windows.Forms.Button();
             this.btn_supprimer = new System.Windows.Forms.Button();
             this.btn_toutSélectionner = new System.Windows.Forms.Button();
-            this.lst_personnel = new System.Windows.Forms.ListBox();
             this.grp_ListeDuPersonnel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_personnel)).BeginInit();
             this.SuspendLayout();
             // 
             // grp_ListeDuPersonnel
             // 
-            this.grp_ListeDuPersonnel.Controls.Add(this.lst_personnel);
+            this.grp_ListeDuPersonnel.Controls.Add(this.dgv_personnel);
             this.grp_ListeDuPersonnel.Controls.Add(this.btn_nouveau);
             this.grp_ListeDuPersonnel.Controls.Add(this.btn_gestionDesAbsences);
             this.grp_ListeDuPersonnel.Controls.Add(this.btn_modifier);
             this.grp_ListeDuPersonnel.Controls.Add(this.btn_supprimer);
             this.grp_ListeDuPersonnel.Controls.Add(this.btn_toutSélectionner);
-            this.grp_ListeDuPersonnel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grp_ListeDuPersonnel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grp_ListeDuPersonnel.Location = new System.Drawing.Point(12, 12);
             this.grp_ListeDuPersonnel.Name = "grp_ListeDuPersonnel";
-            this.grp_ListeDuPersonnel.Size = new System.Drawing.Size(371, 336);
+            this.grp_ListeDuPersonnel.Size = new System.Drawing.Size(598, 341);
             this.grp_ListeDuPersonnel.TabIndex = 2;
             this.grp_ListeDuPersonnel.TabStop = false;
             this.grp_ListeDuPersonnel.Text = "Liste du personnel";
             this.grp_ListeDuPersonnel.Enter += new System.EventHandler(this.grp_seConnecter_Enter);
+            // 
+            // dgv_personnel
+            // 
+            this.dgv_personnel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_personnel.Location = new System.Drawing.Point(6, 29);
+            this.dgv_personnel.Name = "dgv_personnel";
+            this.dgv_personnel.Size = new System.Drawing.Size(586, 231);
+            this.dgv_personnel.TabIndex = 6;
+            this.dgv_personnel.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btn_nouveau
             // 
@@ -113,25 +123,17 @@
             this.btn_toutSélectionner.UseVisualStyleBackColor = true;
             this.btn_toutSélectionner.Click += new System.EventHandler(this.button1_Click);
             // 
-            // lst_personnel
-            // 
-            this.lst_personnel.FormattingEnabled = true;
-            this.lst_personnel.ItemHeight = 24;
-            this.lst_personnel.Location = new System.Drawing.Point(6, 28);
-            this.lst_personnel.Name = "lst_personnel";
-            this.lst_personnel.Size = new System.Drawing.Size(356, 244);
-            this.lst_personnel.TabIndex = 5;
-            // 
             // liste_personnel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(386, 361);
+            this.ClientSize = new System.Drawing.Size(622, 356);
             this.Controls.Add(this.grp_ListeDuPersonnel);
             this.Name = "liste_personnel";
             this.Text = "liste_personnel";
             this.Load += new System.EventHandler(this.liste_personnel_Load);
             this.grp_ListeDuPersonnel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_personnel)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -144,6 +146,6 @@
         private System.Windows.Forms.Button btn_gestionDesAbsences;
         private System.Windows.Forms.Button btn_modifier;
         private System.Windows.Forms.Button btn_supprimer;
-        private System.Windows.Forms.ListBox lst_personnel;
+        private System.Windows.Forms.DataGridView dgv_personnel;
     }
 }

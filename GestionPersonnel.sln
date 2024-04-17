@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.34112.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atelier2", "Atelier2\Atelier2.csproj", "{74EE8634-1890-4120-BDD4-F06F3E1B567C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionPersonnel", "Atelier2\GestionPersonnel.csproj", "{74EE8634-1890-4120-BDD4-F06F3E1B567C}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{395CDE52-1B2A-42E8-B2BB-142A72968603}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Gestion du Personnel", "Setup1\Setup1.vdproj", "{395CDE52-1B2A-42E8-B2BB-142A72968603}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

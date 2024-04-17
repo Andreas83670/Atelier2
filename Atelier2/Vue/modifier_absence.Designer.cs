@@ -1,4 +1,4 @@
-﻿namespace Atelier2.Vue
+﻿namespace GestionPersonnel.Vue
 {
     partial class modifier_absence
     {
@@ -28,137 +28,136 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.grp_modifierUneAbsence = new System.Windows.Forms.GroupBox();
-            this.date_fin = new System.Windows.Forms.DateTimePicker();
-            this.date_debut = new System.Windows.Forms.DateTimePicker();
-            this.lbl_dateDeFin = new System.Windows.Forms.Label();
-            this.cb_motif = new System.Windows.Forms.ComboBox();
-            this.lbl_motif = new System.Windows.Forms.Label();
-            this.lbl_dateDeDebut = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btn_modifier = new System.Windows.Forms.Button();
             this.btn_annuler = new System.Windows.Forms.Button();
-            this.btn_valider = new System.Windows.Forms.Button();
-            this.grp_modifierUneAbsence.SuspendLayout();
+            this.grp_ModifierAbsence = new System.Windows.Forms.GroupBox();
+            this.lbl_motif = new System.Windows.Forms.Label();
+            this.lbl_dateFin = new System.Windows.Forms.Label();
+            this.cb_motif = new System.Windows.Forms.ComboBox();
+            this.lbl_dateDebut = new System.Windows.Forms.Label();
+            this.grp_ModifierAbsence.SuspendLayout();
             this.SuspendLayout();
             // 
-            // grp_modifierUneAbsence
+            // dateTimePicker2
             // 
-            this.grp_modifierUneAbsence.Controls.Add(this.date_fin);
-            this.grp_modifierUneAbsence.Controls.Add(this.date_debut);
-            this.grp_modifierUneAbsence.Controls.Add(this.lbl_dateDeFin);
-            this.grp_modifierUneAbsence.Controls.Add(this.cb_motif);
-            this.grp_modifierUneAbsence.Controls.Add(this.lbl_motif);
-            this.grp_modifierUneAbsence.Controls.Add(this.lbl_dateDeDebut);
-            this.grp_modifierUneAbsence.Controls.Add(this.btn_annuler);
-            this.grp_modifierUneAbsence.Controls.Add(this.btn_valider);
-            this.grp_modifierUneAbsence.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grp_modifierUneAbsence.Location = new System.Drawing.Point(12, 12);
-            this.grp_modifierUneAbsence.Name = "grp_modifierUneAbsence";
-            this.grp_modifierUneAbsence.Size = new System.Drawing.Size(280, 143);
-            this.grp_modifierUneAbsence.TabIndex = 6;
-            this.grp_modifierUneAbsence.TabStop = false;
-            this.grp_modifierUneAbsence.Text = "Modifier une absence";
+            this.dateTimePicker2.CustomFormat = "dd/MM/yyyy à HH:mm";
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker2.Location = new System.Drawing.Point(109, 79);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 0;
             // 
-            // date_fin
+            // dateTimePicker1
             // 
-            this.date_fin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date_fin.Location = new System.Drawing.Point(106, 57);
-            this.date_fin.Name = "date_fin";
-            this.date_fin.Size = new System.Drawing.Size(167, 20);
-            this.date_fin.TabIndex = 15;
+            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy à HH:mm";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(109, 53);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 1;
             // 
-            // date_debut
+            // btn_modifier
             // 
-            this.date_debut.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date_debut.Location = new System.Drawing.Point(107, 31);
-            this.date_debut.Name = "date_debut";
-            this.date_debut.Size = new System.Drawing.Size(167, 20);
-            this.date_debut.TabIndex = 14;
+            this.btn_modifier.Location = new System.Drawing.Point(109, 138);
+            this.btn_modifier.Name = "btn_modifier";
+            this.btn_modifier.Size = new System.Drawing.Size(75, 23);
+            this.btn_modifier.TabIndex = 2;
+            this.btn_modifier.Text = "Modifier";
+            this.btn_modifier.UseVisualStyleBackColor = true;
+            this.btn_modifier.Click += new System.EventHandler(this.btn_modifier_Click);
             // 
-            // lbl_dateDeFin
+            // btn_annuler
             // 
-            this.lbl_dateDeFin.AutoSize = true;
-            this.lbl_dateDeFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_dateDeFin.Location = new System.Drawing.Point(25, 60);
-            this.lbl_dateDeFin.Name = "lbl_dateDeFin";
-            this.lbl_dateDeFin.Size = new System.Drawing.Size(59, 13);
-            this.lbl_dateDeFin.TabIndex = 13;
-            this.lbl_dateDeFin.Text = "Date de fin";
+            this.btn_annuler.Location = new System.Drawing.Point(190, 138);
+            this.btn_annuler.Name = "btn_annuler";
+            this.btn_annuler.Size = new System.Drawing.Size(75, 23);
+            this.btn_annuler.TabIndex = 3;
+            this.btn_annuler.Text = "Annuler";
+            this.btn_annuler.UseVisualStyleBackColor = true;
+            this.btn_annuler.Click += new System.EventHandler(this.btn_annuler_Click);
             // 
-            // cb_motif
+            // grp_ModifierAbsence
             // 
-            this.cb_motif.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_motif.FormattingEnabled = true;
-            this.cb_motif.Location = new System.Drawing.Point(106, 83);
-            this.cb_motif.Name = "cb_motif";
-            this.cb_motif.Size = new System.Drawing.Size(167, 21);
-            this.cb_motif.TabIndex = 12;
+            this.grp_ModifierAbsence.Controls.Add(this.lbl_motif);
+            this.grp_ModifierAbsence.Controls.Add(this.lbl_dateFin);
+            this.grp_ModifierAbsence.Controls.Add(this.cb_motif);
+            this.grp_ModifierAbsence.Controls.Add(this.lbl_dateDebut);
+            this.grp_ModifierAbsence.Controls.Add(this.btn_modifier);
+            this.grp_ModifierAbsence.Controls.Add(this.btn_annuler);
+            this.grp_ModifierAbsence.Controls.Add(this.dateTimePicker1);
+            this.grp_ModifierAbsence.Controls.Add(this.dateTimePicker2);
+            this.grp_ModifierAbsence.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grp_ModifierAbsence.Location = new System.Drawing.Point(12, 12);
+            this.grp_ModifierAbsence.Name = "grp_ModifierAbsence";
+            this.grp_ModifierAbsence.Size = new System.Drawing.Size(318, 173);
+            this.grp_ModifierAbsence.TabIndex = 4;
+            this.grp_ModifierAbsence.TabStop = false;
+            this.grp_ModifierAbsence.Text = "Modifier une absence";
             // 
             // lbl_motif
             // 
             this.lbl_motif.AutoSize = true;
-            this.lbl_motif.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_motif.Location = new System.Drawing.Point(25, 86);
+            this.lbl_motif.Location = new System.Drawing.Point(16, 108);
             this.lbl_motif.Name = "lbl_motif";
             this.lbl_motif.Size = new System.Drawing.Size(30, 13);
             this.lbl_motif.TabIndex = 7;
             this.lbl_motif.Text = "Motif";
             // 
-            // lbl_dateDeDebut
+            // lbl_dateFin
             // 
-            this.lbl_dateDeDebut.AutoSize = true;
-            this.lbl_dateDeDebut.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_dateDeDebut.Location = new System.Drawing.Point(26, 37);
-            this.lbl_dateDeDebut.Name = "lbl_dateDeDebut";
-            this.lbl_dateDeDebut.Size = new System.Drawing.Size(75, 13);
-            this.lbl_dateDeDebut.TabIndex = 3;
-            this.lbl_dateDeDebut.Text = "Date de début";
+            this.lbl_dateFin.AutoSize = true;
+            this.lbl_dateFin.Location = new System.Drawing.Point(16, 85);
+            this.lbl_dateFin.Name = "lbl_dateFin";
+            this.lbl_dateFin.Size = new System.Drawing.Size(59, 13);
+            this.lbl_dateFin.TabIndex = 6;
+            this.lbl_dateFin.Text = "Date de fin";
             // 
-            // btn_annuler
+            // cb_motif
             // 
-            this.btn_annuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_annuler.Location = new System.Drawing.Point(174, 110);
-            this.btn_annuler.Name = "btn_annuler";
-            this.btn_annuler.Size = new System.Drawing.Size(53, 23);
-            this.btn_annuler.TabIndex = 2;
-            this.btn_annuler.Text = "Annuler";
-            this.btn_annuler.UseVisualStyleBackColor = true;
-            this.btn_annuler.Click += new System.EventHandler(this.btn_annuler_Click);
+            this.cb_motif.FormattingEnabled = true;
+            this.cb_motif.Location = new System.Drawing.Point(109, 105);
+            this.cb_motif.Name = "cb_motif";
+            this.cb_motif.Size = new System.Drawing.Size(121, 21);
+            this.cb_motif.TabIndex = 5;
+            this.cb_motif.SelectedIndexChanged += new System.EventHandler(this.cb_motif_SelectedIndexChanged);
             // 
-            // btn_valider
+            // lbl_dateDebut
             // 
-            this.btn_valider.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_valider.Location = new System.Drawing.Point(106, 110);
-            this.btn_valider.Name = "btn_valider";
-            this.btn_valider.Size = new System.Drawing.Size(62, 23);
-            this.btn_valider.TabIndex = 1;
-            this.btn_valider.Text = "Valider";
-            this.btn_valider.UseVisualStyleBackColor = true;
-            this.btn_valider.Click += new System.EventHandler(this.btn_valider_Click);
+            this.lbl_dateDebut.AutoSize = true;
+            this.lbl_dateDebut.Location = new System.Drawing.Point(16, 59);
+            this.lbl_dateDebut.Name = "lbl_dateDebut";
+            this.lbl_dateDebut.Size = new System.Drawing.Size(75, 13);
+            this.lbl_dateDebut.TabIndex = 4;
+            this.lbl_dateDebut.Text = "Date de début";
+            this.lbl_dateDebut.Click += new System.EventHandler(this.label1_Click);
             // 
             // modifier_absence
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(299, 168);
-            this.Controls.Add(this.grp_modifierUneAbsence);
+            this.ClientSize = new System.Drawing.Size(335, 185);
+            this.Controls.Add(this.grp_ModifierAbsence);
             this.Name = "modifier_absence";
             this.Text = "modifier_absence";
-            this.grp_modifierUneAbsence.ResumeLayout(false);
-            this.grp_modifierUneAbsence.PerformLayout();
+            this.Load += new System.EventHandler(this.modifier_absence_Load);
+            this.grp_ModifierAbsence.ResumeLayout(false);
+            this.grp_ModifierAbsence.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox grp_modifierUneAbsence;
-        private System.Windows.Forms.DateTimePicker date_fin;
-        private System.Windows.Forms.DateTimePicker date_debut;
-        private System.Windows.Forms.Label lbl_dateDeFin;
-        private System.Windows.Forms.ComboBox cb_motif;
-        private System.Windows.Forms.Label lbl_motif;
-        private System.Windows.Forms.Label lbl_dateDeDebut;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btn_modifier;
         private System.Windows.Forms.Button btn_annuler;
-        private System.Windows.Forms.Button btn_valider;
+        private System.Windows.Forms.GroupBox grp_ModifierAbsence;
+        private System.Windows.Forms.ComboBox cb_motif;
+        private System.Windows.Forms.Label lbl_dateDebut;
+        private System.Windows.Forms.Label lbl_dateFin;
+        private System.Windows.Forms.Label lbl_motif;
     }
 }

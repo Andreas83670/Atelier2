@@ -1,4 +1,4 @@
-﻿namespace Atelier2.Vue
+﻿namespace GestionPersonnel.Vue
 {
     /// <summary>
     /// classe supprimer personnel

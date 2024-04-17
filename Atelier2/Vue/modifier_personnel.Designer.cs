@@ -1,4 +1,4 @@
-﻿namespace Atelier2.Vue
+﻿namespace GestionPersonnel.Vue
 {
     /// <summary>
     /// classe de modifier personnel
@@ -191,6 +191,7 @@
             this.Controls.Add(this.grp_modifierUnPersonnel);
             this.Name = "modifier_personnel";
             this.Text = "modifier_personnel";
+            this.Load += new System.EventHandler(this.modifier_personnel_Load);
             this.grp_modifierUnPersonnel.ResumeLayout(false);
             this.grp_modifierUnPersonnel.PerformLayout();
             this.ResumeLayout(false);

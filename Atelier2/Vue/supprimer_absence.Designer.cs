@@ -1,4 +1,4 @@
-﻿namespace Atelier2.Vue
+﻿namespace GestionPersonnel.Vue
 {
     partial class supprimer_absence
     {
@@ -61,7 +61,7 @@
             // btn_annuler
             // 
             this.btn_annuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_annuler.Location = new System.Drawing.Point(139, 66);
+            this.btn_annuler.Location = new System.Drawing.Point(149, 66);
             this.btn_annuler.Name = "btn_annuler";
             this.btn_annuler.Size = new System.Drawing.Size(53, 23);
             this.btn_annuler.TabIndex = 2;
@@ -72,7 +72,7 @@
             // btn_valider
             // 
             this.btn_valider.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_valider.Location = new System.Drawing.Point(71, 66);
+            this.btn_valider.Location = new System.Drawing.Point(81, 66);
             this.btn_valider.Name = "btn_valider";
             this.btn_valider.Size = new System.Drawing.Size(62, 23);
             this.btn_valider.TabIndex = 1;

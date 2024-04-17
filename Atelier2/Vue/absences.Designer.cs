@@ -1,4 +1,4 @@
-﻿namespace Atelier2.Vue
+﻿namespace GestionPersonnel.Vue
 {
     partial class absences
     {
@@ -29,37 +29,38 @@
         private void InitializeComponent()
         {
             this.grp_Absences = new System.Windows.Forms.GroupBox();
-            this.lst_absences = new System.Windows.Forms.ListBox();
+            this.dgv_absences = new System.Windows.Forms.DataGridView();
             this.btn_ajouter = new System.Windows.Forms.Button();
             this.btn_modifier = new System.Windows.Forms.Button();
             this.btn_supprimer = new System.Windows.Forms.Button();
             this.btn_toutSélectionner = new System.Windows.Forms.Button();
             this.grp_Absences.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_absences)).BeginInit();
             this.SuspendLayout();
             // 
             // grp_Absences
             // 
-            this.grp_Absences.Controls.Add(this.lst_absences);
+            this.grp_Absences.Controls.Add(this.dgv_absences);
             this.grp_Absences.Controls.Add(this.btn_ajouter);
             this.grp_Absences.Controls.Add(this.btn_modifier);
             this.grp_Absences.Controls.Add(this.btn_supprimer);
             this.grp_Absences.Controls.Add(this.btn_toutSélectionner);
-            this.grp_Absences.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grp_Absences.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grp_Absences.Location = new System.Drawing.Point(12, 12);
             this.grp_Absences.Name = "grp_Absences";
-            this.grp_Absences.Size = new System.Drawing.Size(371, 304);
+            this.grp_Absences.Size = new System.Drawing.Size(589, 304);
             this.grp_Absences.TabIndex = 3;
             this.grp_Absences.TabStop = false;
             this.grp_Absences.Text = "Absences";
             // 
-            // lst_absences
+            // dgv_absences
             // 
-            this.lst_absences.FormattingEnabled = true;
-            this.lst_absences.ItemHeight = 24;
-            this.lst_absences.Location = new System.Drawing.Point(6, 28);
-            this.lst_absences.Name = "lst_absences";
-            this.lst_absences.Size = new System.Drawing.Size(358, 244);
-            this.lst_absences.TabIndex = 5;
+            this.dgv_absences.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_absences.Location = new System.Drawing.Point(6, 28);
+            this.dgv_absences.Name = "dgv_absences";
+            this.dgv_absences.Size = new System.Drawing.Size(576, 241);
+            this.dgv_absences.TabIndex = 5;
+            this.dgv_absences.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_absences_CellContentClick);
             // 
             // btn_ajouter
             // 
@@ -103,17 +104,19 @@
             this.btn_toutSélectionner.TabIndex = 0;
             this.btn_toutSélectionner.Text = "Tout sélectionner";
             this.btn_toutSélectionner.UseVisualStyleBackColor = true;
+            this.btn_toutSélectionner.Click += new System.EventHandler(this.btn_toutSélectionner_Click);
             // 
             // absences
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(388, 316);
+            this.ClientSize = new System.Drawing.Size(608, 316);
             this.Controls.Add(this.grp_Absences);
             this.Name = "absences";
             this.Text = "absences";
             this.Load += new System.EventHandler(this.absences_Load);
             this.grp_Absences.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_absences)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -125,6 +128,6 @@
         private System.Windows.Forms.Button btn_modifier;
         private System.Windows.Forms.Button btn_supprimer;
         private System.Windows.Forms.Button btn_toutSélectionner;
-        private System.Windows.Forms.ListBox lst_absences;
+        private System.Windows.Forms.DataGridView dgv_absences;
     }
 }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Atelier2.Properties
+namespace GestionPersonnel.Properties
 {
 
 
