@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ajouter_absence));
             this.grp_ajouterUneAbsence = new System.Windows.Forms.GroupBox();
             this.lbl_infos = new System.Windows.Forms.Label();
             this.cb_nomcomplet = new System.Windows.Forms.ComboBox();
@@ -181,8 +182,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(297, 225);
             this.Controls.Add(this.grp_ajouterUneAbsence);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ajouter_absence";
-            this.Text = "ajouter_absence";
+            this.Text = "Ajouter une absence";
             this.Load += new System.EventHandler(this.ajouter_absence_Load);
             this.grp_ajouterUneAbsence.ResumeLayout(false);
             this.grp_ajouterUneAbsence.PerformLayout();

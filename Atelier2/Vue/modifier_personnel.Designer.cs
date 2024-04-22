@@ -31,6 +31,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(modifier_personnel));
             this.grp_modifierUnPersonnel = new System.Windows.Forms.GroupBox();
             this.cb_service = new System.Windows.Forms.ComboBox();
             this.txt_mail = new System.Windows.Forms.TextBox();
@@ -189,8 +190,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(296, 221);
             this.Controls.Add(this.grp_modifierUnPersonnel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "modifier_personnel";
-            this.Text = "modifier_personnel";
+            this.Text = "Modifier un personnel";
             this.Load += new System.EventHandler(this.modifier_personnel_Load);
             this.grp_modifierUnPersonnel.ResumeLayout(false);
             this.grp_modifierUnPersonnel.PerformLayout();

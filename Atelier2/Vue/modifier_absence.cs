@@ -37,19 +37,42 @@ namespace GestionPersonnel.Vue
         }
 
         /// <summary>
+        /// méthode pour remplir les champs
+        /// </summary>
+        /// <param name="datedebut"></param>
+        /// <param name="datefin"></param>
+        /// <param name="idmotif"></param>
+        public void RemplirLesChamps(DateTime datedebut, DateTime datefin, int idmotif)
+        {
+            if (cb_motif.Items.Count == 0)
+            {
+                //rempli les combobox
+                cb_motif.Items.Add("Vacances");
+                cb_motif.Items.Add("Maladie");
+                cb_motif.Items.Add("Motif familial");
+                cb_motif.Items.Add("Congé parental");
+            }
+
+            dateTimePicker1.Value = datedebut;
+            dateTimePicker2.Value = datefin;
+            cb_motif.SelectedIndex = idmotif - 1;
+        }
+
+        /// <summary>
         /// load de la fenêtre modifier_absence
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void modifier_absence_Load(object sender, EventArgs e)
         {
-            //rempli les combobox
-            cb_motif.Items.Add("Vacances");
-            cb_motif.Items.Add("Maladie");
-            cb_motif.Items.Add("Motif familial");
-            cb_motif.Items.Add("Congé parental");
-
-
+            if (cb_motif.Items.Count == 0)
+            {
+                //rempli les combobox
+                cb_motif.Items.Add("Vacances");
+                cb_motif.Items.Add("Maladie");
+                cb_motif.Items.Add("Motif familial");
+                cb_motif.Items.Add("Congé parental");
+            }
         }      
         private void label1_Click(object sender, EventArgs e)
         {

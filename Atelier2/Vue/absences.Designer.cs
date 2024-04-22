@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(absences));
             this.grp_Absences = new System.Windows.Forms.GroupBox();
             this.dgv_absences = new System.Windows.Forms.DataGridView();
             this.btn_ajouter = new System.Windows.Forms.Button();
@@ -112,8 +113,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(608, 316);
             this.Controls.Add(this.grp_Absences);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "absences";
-            this.Text = "absences";
+            this.Text = "Liste des absences";
             this.Load += new System.EventHandler(this.absences_Load);
             this.grp_Absences.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_absences)).EndInit();

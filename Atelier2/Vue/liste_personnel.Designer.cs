@@ -31,6 +31,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(liste_personnel));
             this.grp_ListeDuPersonnel = new System.Windows.Forms.GroupBox();
             this.dgv_personnel = new System.Windows.Forms.DataGridView();
             this.btn_nouveau = new System.Windows.Forms.Button();
@@ -129,8 +130,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(622, 356);
             this.Controls.Add(this.grp_ListeDuPersonnel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "liste_personnel";
-            this.Text = "liste_personnel";
+            this.Text = "Liste du personnel";
             this.Load += new System.EventHandler(this.liste_personnel_Load);
             this.grp_ListeDuPersonnel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_personnel)).EndInit();

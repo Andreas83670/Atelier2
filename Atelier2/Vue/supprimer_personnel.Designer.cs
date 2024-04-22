@@ -31,6 +31,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(supprimer_personnel));
             this.grp_SupprimerUnPersonnel = new System.Windows.Forms.GroupBox();
             this.lbl_confirmation = new System.Windows.Forms.Label();
             this.btn_annuler = new System.Windows.Forms.Button();
@@ -90,8 +91,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(306, 124);
             this.Controls.Add(this.grp_SupprimerUnPersonnel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "supprimer_personnel";
-            this.Text = "supprimer_personnel";
+            this.Text = "Supprimer un personnel";
             this.Load += new System.EventHandler(this.supprimer_personnel_Load);
             this.grp_SupprimerUnPersonnel.ResumeLayout(false);
             this.grp_SupprimerUnPersonnel.PerformLayout();

@@ -137,6 +137,22 @@ namespace GestionPersonnel.Vue
             {
                 MessageBox.Show("Erreur");
             }
+        }     
+
+        public void RemplirLesChamps(string prenom, string nom, string tel, string mail, int service)
+        {
+            if (cb_service.Items.Count == 0)
+            {
+                //rempli le combobox
+                cb_service.Items.Add("Administratif");
+                cb_service.Items.Add("Médiation culturelle");
+                cb_service.Items.Add("Prêt");
+            }
+            txt_prenom.Text = prenom;
+            txt_nom.Text = nom;
+            txt_tel.Text = tel;
+            txt_mail.Text = mail;
+            cb_service.SelectedIndex = service-1;
         }
 
         /// <summary>
@@ -146,10 +162,8 @@ namespace GestionPersonnel.Vue
         /// <param name="e"></param>
         private void modifier_personnel_Load(object sender, EventArgs e)
         {
-            //rempli le combobox
-            cb_service.Items.Add("Administratif");
-            cb_service.Items.Add("Médiation culturelle");
-            cb_service.Items.Add("Prêt");
+            
+
         }
         private void modifier_personnel_FormClose(object sender, EventArgs e)
         {

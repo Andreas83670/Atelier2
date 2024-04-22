@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(modifier_absence));
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btn_modifier = new System.Windows.Forms.Button();
@@ -42,7 +43,7 @@
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.CustomFormat = "dd/MM/yyyy à HH:mm";
+            this.dateTimePicker2.CustomFormat = "dd/MM/yyyy à HH:mm:ss";
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker2.Location = new System.Drawing.Point(109, 79);
             this.dateTimePicker2.Name = "dateTimePicker2";
@@ -51,7 +52,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy à HH:mm";
+            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy à HH:mm:ss";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(109, 53);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -139,8 +140,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(335, 185);
             this.Controls.Add(this.grp_ModifierAbsence);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "modifier_absence";
-            this.Text = "modifier_absence";
+            this.Text = "Modifier une absence";
             this.Load += new System.EventHandler(this.modifier_absence_Load);
             this.grp_ModifierAbsence.ResumeLayout(false);
             this.grp_ModifierAbsence.PerformLayout();

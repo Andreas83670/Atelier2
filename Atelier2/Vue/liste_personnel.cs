@@ -235,6 +235,43 @@ namespace GestionPersonnel
         /// <param name="e"></param>
         private void btn_modifier_Click(object sender, EventArgs e)
         {
+            if (dgv_personnel.SelectedRows.Count > 0)
+            {
+                int rowIndex = dgv_personnel.SelectedRows[0].Index;
+
+                int IdPersonnel = Convert.ToInt32(dgv_personnel.Rows[rowIndex].Cells["Id Personnel"].Value.ToString());
+                string Prenom = dgv_personnel.Rows[rowIndex].Cells["Prénom"].Value.ToString();
+                string Nom = dgv_personnel.Rows[rowIndex].Cells["Nom"].Value.ToString();
+                string tel = dgv_personnel.Rows[rowIndex].Cells["Téléphone"].Value.ToString();
+                string mail = dgv_personnel.Rows[rowIndex].Cells["Email"].Value.ToString();
+
+                //recherche de l'idservice
+
+                string stringQuery = "SELECT idservice FROM personnel WHERE idpersonnel = @idPersonnel";
+
+                // Crée un dictionnaire pour stocker les paramètres de la requête
+                Dictionary<string, object> parameters = new Dictionary<string, object>();
+                parameters.Add("@idPersonnel", IdPersonnel);
+
+
+                // Exécutez la requête SQL pour obtenir l'ID du service
+                List<object[]> resultats = bddmanager.ReqSelect(stringQuery, parameters);
+
+                // Vérifiez si des résultats ont été retournés
+                if (resultats.Count > 0)
+                {
+                    // Récupérez l'ID du service à partir du premier résultat
+                    int idService = Convert.ToInt32(resultats[0][0]);
+
+                    FrmModifierPersonnel.RemplirLesChamps(Prenom, Nom, tel, mail, idService);
+                }
+                else
+                {
+                    // Gérer le cas où aucune ligne n'est sélectionnée
+                    MessageBox.Show("Aucune ligne sélectionnée.");
+                }
+            }
+            
             //lance la fenêtre pour modifier le personnel
             FrmModifierPersonnel.ShowDialog();
         }

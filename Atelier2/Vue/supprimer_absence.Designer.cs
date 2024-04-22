@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(supprimer_absence));
             this.grp_SupprimerUneAbsence = new System.Windows.Forms.GroupBox();
             this.lbl_confirmation = new System.Windows.Forms.Label();
             this.btn_annuler = new System.Windows.Forms.Button();
@@ -86,8 +87,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(310, 124);
             this.Controls.Add(this.grp_SupprimerUneAbsence);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "supprimer_absence";
-            this.Text = "supprimer_absence";
+            this.Text = "Supprimer une absence";
             this.Load += new System.EventHandler(this.supprimer_absence_Load);
             this.grp_SupprimerUneAbsence.ResumeLayout(false);
             this.grp_SupprimerUneAbsence.PerformLayout();

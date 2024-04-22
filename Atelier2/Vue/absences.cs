@@ -47,7 +47,49 @@ namespace GestionPersonnel.Vue
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btn_modifier_Click(object sender, EventArgs e)
-        {          
+        {
+            try
+            {
+                if (dgv_absences.SelectedRows.Count > 0)
+                {
+                    int rowIndex = dgv_absences.SelectedRows[0].Index;
+
+                    string IdAbsence = dgv_absences.SelectedRows[rowIndex].Cells["Id absence"].Value.ToString();
+                    DateTime datedebut = Convert.ToDateTime(dgv_absences.SelectedRows[rowIndex].Cells["Date de début"].Value.ToString());
+                    DateTime datefin = Convert.ToDateTime(dgv_absences.SelectedRows[rowIndex].Cells["Date de fin"].Value.ToString());
+
+                    //recherche de l'idservice
+
+                    string stringQuery = "SELECT idmotif FROM absence WHERE idabsence = @idAbsence";
+
+                    // Crée un dictionnaire pour stocker les paramètres de la requête
+                    Dictionary<string, object> parameters = new Dictionary<string, object>();
+                    parameters.Add("@idAbsence", IdAbsence);
+
+
+                    // Exécutez la requête SQL pour obtenir l'ID du service
+                    List<object[]> resultats = bddmanager.ReqSelect(stringQuery, parameters);
+
+                    // Vérifiez si des résultats ont été retournés
+                    if (resultats.Count > 0)
+                    {
+                        // Récupérez l'ID du service à partir du premier résultat
+                        int idMotif = Convert.ToInt32(resultats[0][0]);
+
+                        modifAbsence.RemplirLesChamps(datedebut, datefin, idMotif);
+                    }
+
+                }
+                else
+                {
+                    // Gérer le cas où aucune ligne n'est sélectionnée
+                    MessageBox.Show("Aucune ligne sélectionnée.");
+                }
+            }catch (Exception error)
+            {
+                
+            }
+
             modifAbsence.ShowDialog();        
         }
 
@@ -181,7 +223,7 @@ namespace GestionPersonnel.Vue
 
             foreach (DataGridViewRow row in dgv_absences.SelectedRows)
             {
-                if (row.Cells["id absence"].Value != null)
+                if (row.Cells["Id absence"].Value != null)
                 {
                     int idAbsence = Convert.ToInt32(row.Cells["Id absence"].Value);
                     concat = string.Concat(concat, idAbsence, ","); // Concatène l'ID d'absence avec une virgule

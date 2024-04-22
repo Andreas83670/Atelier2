@@ -31,6 +31,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(se_connecter));
             this.grp_seConnecter = new System.Windows.Forms.GroupBox();
             this.lbl_info = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -120,8 +121,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(458, 117);
             this.Controls.Add(this.grp_seConnecter);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "se_connecter";
-            this.Text = "se_connecter";
+            this.Text = "Se connecter";
             this.Load += new System.EventHandler(this.se_connecter_Load);
             this.grp_seConnecter.ResumeLayout(false);
             this.grp_seConnecter.PerformLayout();
